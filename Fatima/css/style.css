@@ -1,0 +1,311 @@
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+
+.one {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.one>img {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.front {
+  margin: 20px auto 20px auto;
+  width: 70%;
+  height: auto;
+  /* color:0 1px 2px rgba(137, 180, 19, 0.582); */
+}
+
+.front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* .map p {
+  animation: myLigt 4s infinite;
+  animation-timing-function: linear;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  background: none;
+  border: none;
+} */
+
+@keyframes myTextLigt {
+  from {
+    color: #00ccff;
+  }
+
+  to {
+    color: #1B003A;
+  }
+}
+
+.map {
+  position: absolute;
+  position: relative;
+  width: 150px;
+  bottom: 130px;
+  padding: 5px;
+  background-color: #67b3f1;
+  animation: myLigt 4s infinite;
+  animation-timing-function: linear;
+  text-align: center;
+  color: red !important;
+  overflow: hidden;
+}
+
+@keyframes myLigt {
+  from {
+    box-shadow: 0 0 0px #FFAA00, 0 0 0px #FFAA00, 0 0 0px #FFAA00;
+    background: black;
+    color: #00ccff;
+  }
+
+  to {
+    box-shadow: 0 0 20px #FFAA00, 0 0 50px #FFAA00, 0 0 90px #FFAA00;
+    background: #FFAA00;
+    color: #1B003A;
+  }
+}
+
+.map span {
+  position: absolute;
+  display: block;
+}
+
+.map span:nth-child(1) {
+  top: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #FFAA00);
+  animation: spanLight1 4s infinite;
+  /* -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1; */
+}
+
+@keyframes spanLight1 {
+  from {
+    left: -300px
+  }
+
+  to {
+    left: 0px;
+  }
+}
+
+.map span:nth-child(2) {
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #FFAA00);
+  animation: spanLight2 4s infinite;
+  /* -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6; */
+}
+
+@keyframes spanLight2 {
+  from {
+    top: -100px;
+  }
+
+  to {
+    top: 0px;
+  }
+}
+
+.map span:nth-child(3) {
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #FFAA00);
+  animation: spanLight3 4s infinite;
+  /* -webkit-animation-delay: 1s;
+  animation-delay: 1s; */
+}
+
+@keyframes spanLight3 {
+  from {
+    right: -100%;
+  }
+
+  to {
+    right: 0%;
+  }
+}
+
+.map span:nth-child(4) {
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #FFAA00);
+  animation: spanLight4 4s infinite;
+  /* -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4; */
+  /* animation-delay: 0.4; */
+}
+
+@keyframes spanLight4 {
+  from {
+    bottom: -100px;
+  }
+
+  to {
+    bottom: 0px;
+  }
+}
+
+
+
+.map a {
+  color: white;
+  text-decoration: none !important;
+  font-size: 18px;
+}
+
+@media(max-width:1199px) {
+  .map {
+    bottom: 20px;
+  }
+}
+
+@media (max-width:1024px) {
+  .content {
+    height: 140vh;
+  }
+
+  .front {
+    margin: 100px auto 100px auto;
+    width: 80%;
+  }
+
+  .map {
+    width: 150px;
+    bottom: 80px;
+    text-align: center;
+  }
+
+  .map a {
+    font-size: 12px;
+  }
+}
+
+@media (max-width:991px) {
+  .content {
+    height: 140vh;
+  }
+
+
+  .front {
+    margin: 60px auto 60px auto;
+    width: 70%;
+  }
+
+
+  .map {
+    width: 130px;
+    bottom: 80px;
+    text-align: center;
+    bottom: 60px;
+  }
+}
+
+@media (max-width:768px) {
+  .content {
+    height: 140vh;
+  }
+
+  .front {
+    margin: 30px auto 30px auto;
+    width: 70%;
+  }
+
+  .map {
+    bottom: 30px;
+  }
+}
+
+@media (max-width:650px) {
+  .content {
+    height: 140vh;
+  }
+
+  .front {
+    margin: 50px auto 50px auto;
+    width: 75%;
+  }
+
+  .map {
+    bottom: 100px;
+  }
+}
+
+@media (max-width:500px) {
+
+  .front {
+    margin: 65px auto 65px auto;
+    width: 80%;
+  }
+
+  .map {
+    bottom: 90px;
+  }
+}
+
+@media (max-width:450px) {
+
+  .front {
+    margin: 70px auto 70px auto;
+    width: 85%;
+  }
+}
+
+@media (max-width:420px) {
+
+  .front {
+    margin: 85px auto 85px auto;
+    width: 85%;
+  }
+}
+
+@media (max-width:400px) {
+
+  .front {
+    margin: 90px auto 90px auto;
+    width: 90%;
+  }
+}
+
+@media (max-width:390px) {
+
+  .front {
+    margin: 100px auto 100px auto;
+  }
+}
+
+@media (max-width:375px) {
+
+  .front {
+    margin: 120px auto 120px auto;
+    width: 95%;
+  }
+}
+
+@media (max-width:350px) {
+
+  .front {
+    margin: 115px auto 115px auto;
+  }
+}
